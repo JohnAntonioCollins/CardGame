@@ -25,8 +25,8 @@ public class CardGameTests {
     }
     @Test
     public void getDeckIndexTest(){
-        String actual = testDeck.getDeckIndex(52).getCard();
-        String expected = "13S";
+        String actual = testDeck.getDeckIndex(54).getCard();
+        String expected = "2R";
 
         assertEquals("should return '13S'", expected, actual);
     }
