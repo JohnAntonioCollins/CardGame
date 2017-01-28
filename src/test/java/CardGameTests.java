@@ -26,9 +26,9 @@ public class CardGameTests {
     @Test
     public void getDeckIndexTest(){
         String actual = testDeck.getDeckIndex(54).getCard();
-        String expected = "2R";
+        String expected = "54R";
 
-        assertEquals("should return '13S'", expected, actual);
+        assertEquals("should return '54R', last card, Joker", expected, actual);
     }
     @Test
     public void getCardValueTest(){
@@ -41,5 +41,12 @@ public class CardGameTests {
         char actual = testCard.getSuit();
         char expected = 'C';
         assertEquals("should return the suit of the card", expected, actual);
+    }
+    @Test
+    public void getDeckNowTest(){
+        String actual = testDeck.getDeckNow();
+        System.out.println(testDeck.getDeckNow());
+        String expected = "dummy expected";
+        assertEquals("should return list of cards now in deck", expected, actual);
     }
 }
