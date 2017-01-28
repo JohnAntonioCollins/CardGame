@@ -44,9 +44,10 @@ public class CardGameTests {
     }
     @Test
     public void getDeckNowTest(){
-        String actual = testDeck.getDeckNow();
-        System.out.println(testDeck.getDeckNow());
-        String expected = "dummy expected";
+        String actual = testDeck.getDeckNow();//full deck including error card and jokers
+        //System.out.println(testDeck.getDeckNow());
+        String expected = "0e"+"\n"+"1C"+"\n"+"2C"+"\n"+"3C"+"\n"+"4C"+"\n"+"5C"+"\n"+"6C"+"\n"+"7C"+"\n"+"8C"+"\n"+"9C"+"\n"+"10C"+"\n"+"11C"+"\n"+"12C"+"\n"+"13C"+"\n"+"1D"+"\n"+"2D"+"\n"+"3D"+"\n"+"4D"+"\n"+"5D"+"\n"+"6D"+"\n"+"7D"+"\n"+"8D"+"\n"+"9D"+"\n"+"10D"+"\n"+"11D"+"\n"+"12D"+"\n"+"13D"+"\n"+"1H"+"\n"+"2H"+"\n"+"3H"+"\n"+"4H"+"\n"+"5H"+"\n"+"6H"+"\n"+"7H"+"\n"+"8H"+"\n"+"9H"+"\n"+"10H"+"\n"+"11H"+"\n"+"12H"+"\n"+"13H"+"\n"+"1S"+"\n"+"2S"+"\n"+"3S"+"\n"+"4S"+"\n"+"5S"+"\n"+"6S"+"\n"+"7S"+"\n"+"8S"+"\n"+"9S"+"\n"+"10S"+"\n"+"11S"+"\n"+"12S"+"\n"+"13S"+"\n"+"1R"+"\n"+"2R"+"\n";
+        //System.out.println(expected);
         assertEquals("should return list of cards now in deck", expected, actual);
     }
 }

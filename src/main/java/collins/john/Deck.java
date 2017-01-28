@@ -18,17 +18,17 @@ public class Deck {
             }
             if (i >= 14 && i < 27) {
 
-                card = new Card(i-13, 'D');
+                card = new Card(i - 13, 'D');
                 deck.add(card);
             }
             if (i >= 27 && i < 40) {
 
-                card = new Card(i-26, 'H');
+                card = new Card(i - 26, 'H');
                 deck.add(card);
             }
             if (i >= 40 && i < 53) {
 
-                card = new Card(i-39, 'S');
+                card = new Card(i - 39, 'S');
                 deck.add(card);
             }
             if (i >= 53 && i < 56) {
@@ -43,13 +43,14 @@ public class Deck {
     public Card getDeckIndex(int i) {
         return deck.get(i);
     }
+
     public String getDeckNow() {
         String currentDeck = "";
         for (int i = 0; i < deck.size() - 1; i++) {
             currentDeck += deck.get(i).getCard() + "\n";
         }
         return currentDeck;//deck.get(deck.size()-1).getCard();//should return 'error card' 55e
-    }
+    }// end getDeckNow
 
 
 
