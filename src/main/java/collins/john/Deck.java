@@ -5,9 +5,13 @@ import java.util.ArrayList;
 /**
  * Created by johncollins on 1/27/17.
  */
-public class Deck {
-    private ArrayList<Card> deck = new ArrayList<Card>();
-    public Deck() {
+public class Deck extends CollectionOfCards{
+
+    public Deck(){
+        this.makeDeck();
+    }
+    private ArrayList<Card> deck = cards;
+    public void makeDeck() {
         Card card = new Card(0, 'e');// 'error card' 0e
         deck.add(card);
         for (int i = 1; i < 56; i++) {
@@ -38,16 +42,4 @@ public class Deck {
         }
         return;
     }//end Deck
-
-    public Card getDeckIndex(int i) {
-        return deck.get(i);
-    }
-
-    public String getDeckNow() {
-        String currentDeck = "";
-        for (int i = 0; i < deck.size() - 1; i++) {
-            currentDeck += deck.get(i).getCard() + "\n";
-        }
-        return currentDeck;//deck.get(deck.size()-1).getCard();//should return 'error card' 55e
-    }// end getDeckNow
 }
