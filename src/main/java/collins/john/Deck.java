@@ -6,8 +6,7 @@ import java.util.ArrayList;
  * Created by johncollins on 1/27/17.
  */
 public class Deck {
-    ArrayList<Card> deck = new ArrayList<Card>();
-
+    private ArrayList<Card> deck = new ArrayList<Card>();
     public Deck() {
         Card card = new Card(0, 'e');// 'error card' 0e
         deck.add(card);
@@ -33,7 +32,7 @@ public class Deck {
             }
             if (i >= 53 && i < 56) {
 
-                card = new Card(i - 52, 'R');
+                card = new Card(i - 52, 'R');// jokeR 1, jokeR 2.
                 deck.add(card);
             }
         }
@@ -51,14 +50,4 @@ public class Deck {
         }
         return currentDeck;//deck.get(deck.size()-1).getCard();//should return 'error card' 55e
     }// end getDeckNow
-
-
-
-    /*
-    putCard(){
-
-    }
-
-    takeCard(){}
-    */
 }

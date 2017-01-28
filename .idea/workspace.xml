@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12681972-f714-4cdf-a111-66f0393fc721" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/Deck.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/Deck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/scratchPad" afterPath="$PROJECT_DIR$/src/main/java/collins/john/scratchPad" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CardGameTests.java" afterPath="$PROJECT_DIR$/src/test/java/CardGameTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,7 +56,7 @@
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="255">
               <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
               <folding>
                 <element signature="e#421#422#0" expanded="true" />
@@ -72,12 +71,12 @@
       <file leaf-file-name="Deck.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+            <state relative-caret-position="765">
+              <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding>
-                <element signature="e#158#164#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#166#172#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +95,8 @@
       <file leaf-file-name="CardGameTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CardGameTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="450">
+              <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -806,25 +805,16 @@
       <option name="presentableId" value="Default" />
       <updated>1484901764149</updated>
       <workItem from="1484901770363" duration="1982000" />
-      <workItem from="1485552209040" duration="21760000" />
+      <workItem from="1485552209040" duration="22628000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CardGameTests_getDeckIndexTest - 2017.01.28 at 00h 19m 18s.xml">
+    <history-entry file="CardGameTests_getDeckIndexTest - 2017.01.28 at 00h 46m 53s.xml">
       <configuration name="CardGameTests.getDeckIndexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_getDeckIndexTest - 2017.01.28 at 00h 21m 58s.xml">
+    <history-entry file="CardGameTests_getDeckIndexTest - 2017.01.28 at 00h 47m 28s.xml">
       <configuration name="CardGameTests.getDeckIndexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 14m 45s.xml">
-      <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 23m 09s.xml">
-      <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 24m 50s.xml">
-      <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 25m 12s.xml">
       <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
@@ -841,9 +831,18 @@
     <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 34m 44s.xml">
       <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 38m 35s.xml">
+      <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 43m 59s.xml">
+      <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CardGameTests_getDeckNowTest - 2017.01.28 at 00h 47m 36s.xml">
+      <configuration name="CardGameTests.getDeckNowTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23742000" />
+    <option name="totallyTimeSpent" value="24610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -986,9 +985,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/scratchPad">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="498" lean-forward="true" selection-start-line="0" selection-start-column="498" selection-end-line="0" selection-end-column="498" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="255">
           <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
           <folding>
             <element signature="e#421#422#0" expanded="true" />
@@ -1001,30 +1008,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CardGameTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="450">
+          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/scratchPad">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="498" lean-forward="true" selection-start-line="0" selection-start-column="498" selection-end-line="0" selection-end-column="498" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        <state relative-caret-position="765">
+          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
           <folding>
-            <element signature="e#158#164#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#166#172#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
           </folding>
         </state>
       </provider>
