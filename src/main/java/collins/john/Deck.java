@@ -7,7 +7,6 @@ import java.util.ArrayList;
  */
 public class Deck {
     ArrayList<Card> deck = new ArrayList<Card>();
-    int cardValue = 1;
 
     public Deck() {
         for (int i = 0; i < 53; i++) {

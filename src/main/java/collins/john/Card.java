@@ -23,15 +23,7 @@ public class Card{
         return cardValue;
     }
 
-    public void setCardValue(int cardValue) {
-        this.cardValue = cardValue;
-    }
-
     public char getSuit() {
         return suit;
-    }
-
-    public void setSuit(char suit) {
-        this.suit = suit;
     }
 }
