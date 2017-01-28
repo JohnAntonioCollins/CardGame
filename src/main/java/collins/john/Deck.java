@@ -41,5 +41,5 @@ public class Deck extends CollectionOfCards{
             }
         }
         return;
-    }//end Deck
+    }//end makeDeck
 }

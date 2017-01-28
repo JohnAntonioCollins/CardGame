@@ -1,6 +1,6 @@
 import collins.john.Card;
+import collins.john.CollectionOfCards;
 import collins.john.Deck;
-import collins.john.Hand;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,12 +13,12 @@ public class CardGameTests {
 
     Card testCard;
     Deck testDeck;
-    Hand testHand;
+    CollectionOfCards testHandetc;
     @Before
     public void setUp() throws Exception {
         testCard = new Card(3, 'C');
         testDeck = new Deck();
-        testHand = new Hand();
+        testHandetc = new CollectionOfCards();
     }
     @Test
     public void getCardTest(){
@@ -55,14 +55,8 @@ public class CardGameTests {
     }
     @Test
     public void HandgetQauntityOfCardsTest(){
-        int actual = testHand.getQuantityOfCards();
+        int actual = testHandetc.getQuantityOfCards();
         int expected = 0;
         assertEquals("hand should start empty, 0", expected, actual);
-    }
-    @Test
-    public void DiscardgetQauntityOfCardsTest(){
-        String actual = testHand.getDiscardedCards();
-        String expected = "";
-        assertEquals("should return empty string because there's no data in an empty arrayList", expected, actual);
     }
 }

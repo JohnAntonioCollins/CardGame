@@ -8,16 +8,16 @@ import java.util.ArrayList;
 public class CollectionOfCards {
     protected ArrayList<Card> cards = new ArrayList<Card>();
 
+
     public Card getCardAtIndex(int i) {
         return this.cards.get(i);
     }
-
     public String getAllCardsNow() {
         String currentCards = "";
         for (int i = 0; i < cards.size() - 1; i++) {
             currentCards += cards.get(i).getCard() + "\n";
         }
-        return currentCards;//deck.get(deck.size()-1).getCard();//should return 'error card' 55e
+        return currentCards;
     }// end getDeckNow
     public int getQuantityOfCards(){
         return cards.size();
