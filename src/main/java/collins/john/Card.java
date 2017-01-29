@@ -14,7 +14,7 @@ public class Card{
         this.suit = suit;
         }
 
-    public String getCard(){
+    public String getCardName(){
         String card = ((Integer.toString(this.cardValue) + this.suit));
         return card;
         }

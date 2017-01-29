@@ -1,5 +1,7 @@
 package collins.john;
 
+import java.util.Collections;
+
 /**
  * Created by johncollins on 1/28/17.
  */
@@ -8,26 +10,34 @@ public class Game {
     //SHUFFLE
     //DEAL
     //sets rules of game
-    //does calculations
+    //does calculations of game
+    //moves cards as per rules & calculations
 
     Deck deck;
     Player player;
-    int cardsDealt = 1;
-    public Game(){
+    int cardsToDeal = 0;
+
+    public Game() {
         deck = new Deck();
-       //player = new Player();
+        shuffleDeck();
+        player = new Player("Player One");
     }
 
-    private void dealOneCard(){
-        Card oneCard = deck.cards.get(cardsDealt);
-        player.cards.add(oneCard);
-        cardsDealt++;
-    }
-    public void deal(CollectionOfCards player, int quantityOfCards){
-        if(cardsDealt < quantityOfCards) {
-        dealOneCard();
+    public void deal(int quantityOfCards) {
+        do {
+            this.player.cards.add(this.deck.cards.get(cardsToDeal));
+            cardsToDeal++;
         }
+        while (cardsToDeal < quantityOfCards);
+    }
 
+    private void shuffleDeck() {
+        Collections.shuffle(deck.cards);
+        for (int i = 0; i < deck.cards.size() - 1; i++) {
+            if (deck.getCardAtIndex(i).getCardValue() == 0) {
+                Collections.swap(deck.cards, i, 0);
+            }
 
+        }
     }
 }

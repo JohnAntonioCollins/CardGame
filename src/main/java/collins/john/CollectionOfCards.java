@@ -15,7 +15,7 @@ public class CollectionOfCards {
     public String getAllCardsNow() {
         String currentCards = "";
         for (int i = 0; i < cards.size() - 1; i++) {
-            currentCards += cards.get(i).getCard() + "\n";
+            currentCards += cards.get(i).getCardName() + "\n";
         }
         return currentCards;
     }// end getDeckNow
