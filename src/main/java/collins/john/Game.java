@@ -4,31 +4,19 @@ import java.util.Collections;
 
 /**
  * Created by johncollins on 1/28/17.
+ * Game is an abstract class that makes a shuffled deck, a player, and has a deal function.
  */
 public class Game {
-    //abstract class with card compare and sort methods
-    //SHUFFLE
-    //DEAL
-    //sets rules of game
-    //does calculations of game
-    //moves cards as per rules & calculations
-
     Deck deck;
-    Player player;
-    int cardsToDeal = 0;
+    Player player1;
+    Player player2;
+    //int cardsToDeal = 1;
 
     public Game() {
         deck = new Deck();
         shuffleDeck();
-        player = new Player("Player One");
-    }
-
-    public void deal(int quantityOfCards) {
-        do {
-            this.player.cards.add(this.deck.cards.get(cardsToDeal));
-            cardsToDeal++;
-        }
-        while (cardsToDeal < quantityOfCards);
+        player1 = new Player("Player One");
+        player2 = new Player("Player two");
     }
 
     private void shuffleDeck() {
@@ -39,5 +27,25 @@ public class Game {
             }
 
         }
+    }
+
+    public void deal(Player player, int quantityOfCards) {
+        int cardsToDeal = 1;
+
+        do {
+            player.hand.add(this.deck.cards.get(1));
+            this.deck.cards.remove(1);
+            cardsToDeal++;
+        }
+        while (cardsToDeal <= quantityOfCards);
+    }
+    public void moveCards(Player from, Player to, int quantityOfCards) {
+        int cardsMoved = 1;
+        do {
+            to.hand.add(from.hand.get(1));
+            from.hand.remove(1);
+            cardsMoved++;
+        }
+        while (cardsMoved <= quantityOfCards);
     }
 }

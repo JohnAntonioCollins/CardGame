@@ -12,7 +12,7 @@ public class Deck extends CollectionOfCards{
     public void makeDeck() {
         Card card = new Card(0, 'e');// 'error card' 0e
         cards.add(card);
-        for (int i = 1; i < 56; i++) {
+        for (int i = 1; i < 55; i++) {
             if (i < 14) {
                 card = new Card(i, 'C');
                 cards.add(card);
@@ -32,7 +32,7 @@ public class Deck extends CollectionOfCards{
                 card = new Card(i - 39, 'S');
                 cards.add(card);
             }
-            if (i >= 53 && i < 56) {
+            if (i >= 53 && i < 55) {
 
                 card = new Card(i - 52, 'R');// jokeR 1, jokeR 2.
                 cards.add(card);

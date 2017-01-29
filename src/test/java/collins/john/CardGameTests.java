@@ -12,15 +12,19 @@ public class CardGameTests {
 
     Card testCard;
     Deck testDeck;
-    CollectionOfCards testHandetc;
+    CollectionOfCards testHand;
     Game testGame;
+    Player testPlayer1;
+    Player testPlayer2;
 
     @Before
     public void setUp() throws Exception {
         testCard = new Card(3, 'C');
         testDeck = new Deck();
-        testHandetc = new CollectionOfCards();
+        testHand = new CollectionOfCards();
         testGame = new Game();
+        testPlayer1 = new Player("Player1");
+        testPlayer2 = new Player("Player2");
     }
 
     @Test
@@ -63,36 +67,57 @@ public class CardGameTests {
 
     @Test
     public void HandgetQauntityOfCardsTest() {
-        int actual = testHandetc.getQuantityOfCards();
+        int actual = testHand.getQuantityOfCards();
         int expected = 0;
         assertEquals("hand should start empty, 0", expected, actual);
     }
 
     @Test
-    public void dealTest() {
-        //tests several things in Game class
-        testGame.deal(5);
-        int actual = testGame.player.cards.size();
+    public void doesGameDealCorrectQuantityTest() {
+        testGame.deal(testGame.player1, 5);
+        int actual = testGame.player1.cards.size();
         int expected = 5;
         assertEquals("should deal 5 random cards to testPlayer", expected, actual);
+    }
+    @Test
+    public void doesGameRemoveDealtCardsFromDeck(){
+        testGame.deal(testGame.player1, 5);
+        int actual = testGame.deck.cards.size();
+        int expected = 50;
+        assertEquals("deck should have 50 items after 5 cards dealt", expected, actual);
     }
 
     @Test
     public void doesGameShuffleTest() {
         boolean actual = testDeck.getCardAtIndex(0).getCardName()
                 .equals(
-                testGame.deck.getCardAtIndex(0).getCardName())
+                        testGame.deck.getCardAtIndex(0).getCardName())
                 &&
                 testGame.deck.getAllCardsNow() != testDeck.getAllCardsNow();
-
-        System.out.println(testGame.deck.getAllCardsNow());
-        System.out.println(testDeck.getAllCardsNow());
         boolean expected = true;
-       /*
-        boolean actual = testGame.deck.getAllCardsNow() != testDeck.getAllCardsNow()
-                && testGame.deck.getCardAtIndex(0).getCardName()
-                == testDeck.getCardAtIndex(0).getCardName();
-                */
         assertEquals("if true: deck is shuffled and 'error' card is index 0", expected, actual);
+    }
+
+    @Test
+    public void getPlayersNameTest() {
+        String actual = testGame.player1.getName();
+        String expected = "Player One";
+        assertEquals("should be name field of given Player", expected, actual);
+    }
+    @Test
+    public void Does_moveCards_moveCorrectQauntity_Test(){
+        testGame.deal(testPlayer1, 10);
+        testGame.moveCards(testPlayer1, testPlayer2, 7);
+        int actual = testPlayer2.hand.size();
+        int expected = 7;
+        assertEquals("Should give player2 7 of player1's cards", expected, actual);
+    }
+    @Test
+    public void Does_moveCards_leaveCorrectQauntity_Test(){
+        testGame.deal(testPlayer1, 10);
+        testGame.moveCards(testPlayer1, testPlayer2, 7);
+        int actual = testPlayer1.hand.size();
+        int expected = 3;
+        assertEquals("Should leave player1 3 cards", expected, actual);
     }
 }
