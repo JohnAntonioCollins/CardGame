@@ -33,7 +33,7 @@ public class Game {
         int cardsToDeal = 1;
 
         do {
-            player.hand.add(this.deck.cards.get(1));
+            player.cards.add(this.deck.cards.get(1));
             this.deck.cards.remove(1);
             cardsToDeal++;
         }
@@ -42,8 +42,8 @@ public class Game {
     public void moveCards(Player from, Player to, int quantityOfCards) {
         int cardsMoved = 1;
         do {
-            to.hand.add(from.hand.get(1));
-            from.hand.remove(1);
+            to.cards.add(from.cards.get(1));
+            from.cards.remove(1);
             cardsMoved++;
         }
         while (cardsMoved <= quantityOfCards);

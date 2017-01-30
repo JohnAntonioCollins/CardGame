@@ -16,6 +16,7 @@ public class CardGameTests {
     Game testGame;
     Player testPlayer1;
     Player testPlayer2;
+    GoFish testGoFish;
 
     @Before
     public void setUp() throws Exception {
@@ -60,7 +61,8 @@ public class CardGameTests {
     public void getAllCardsNowTest() {
         String actual = testDeck.getAllCardsNow();//full deck including error card and jokers
         //System.out.println(testDeck.getDeckNow());
-        String expected = "0e" + "\n" + "1C" + "\n" + "2C" + "\n" + "3C" + "\n" + "4C" + "\n" + "5C" + "\n" + "6C" + "\n" + "7C" + "\n" + "8C" + "\n" + "9C" + "\n" + "10C" + "\n" + "11C" + "\n" + "12C" + "\n" + "13C" + "\n" + "1D" + "\n" + "2D" + "\n" + "3D" + "\n" + "4D" + "\n" + "5D" + "\n" + "6D" + "\n" + "7D" + "\n" + "8D" + "\n" + "9D" + "\n" + "10D" + "\n" + "11D" + "\n" + "12D" + "\n" + "13D" + "\n" + "1H" + "\n" + "2H" + "\n" + "3H" + "\n" + "4H" + "\n" + "5H" + "\n" + "6H" + "\n" + "7H" + "\n" + "8H" + "\n" + "9H" + "\n" + "10H" + "\n" + "11H" + "\n" + "12H" + "\n" + "13H" + "\n" + "1S" + "\n" + "2S" + "\n" + "3S" + "\n" + "4S" + "\n" + "5S" + "\n" + "6S" + "\n" + "7S" + "\n" + "8S" + "\n" + "9S" + "\n" + "10S" + "\n" + "11S" + "\n" + "12S" + "\n" + "13S" + "\n" + "1R" + "\n" + "2R" + "\n";
+        //String expected = "0e" + "\n" + "1C" + "\n" + "2C" + "\n" + "3C" + "\n" + "4C" + "\n" + "5C" + "\n" + "6C" + "\n" + "7C" + "\n" + "8C" + "\n" + "9C" + "\n" + "10C" + "\n" + "11C" + "\n" + "12C" + "\n" + "13C" + "\n" + "1D" + "\n" + "2D" + "\n" + "3D" + "\n" + "4D" + "\n" + "5D" + "\n" + "6D" + "\n" + "7D" + "\n" + "8D" + "\n" + "9D" + "\n" + "10D" + "\n" + "11D" + "\n" + "12D" + "\n" + "13D" + "\n" + "1H" + "\n" + "2H" + "\n" + "3H" + "\n" + "4H" + "\n" + "5H" + "\n" + "6H" + "\n" + "7H" + "\n" + "8H" + "\n" + "9H" + "\n" + "10H" + "\n" + "11H" + "\n" + "12H" + "\n" + "13H" + "\n" + "1S" + "\n" + "2S" + "\n" + "3S" + "\n" + "4S" + "\n" + "5S" + "\n" + "6S" + "\n" + "7S" + "\n" + "8S" + "\n" + "9S" + "\n" + "10S" + "\n" + "11S" + "\n" + "12S" + "\n" + "13S" + "\n" + "1R" + "\n" + "2R" + "\n";
+        String expected = "0e  1C  2C  3C  4C  5C  6C  7C  8C  9C  10C  11C  12C  13C  1D  2D  3D  4D  5D  6D  7D  8D  9D  10D  11D  12D  13D  1H  2H  3H  4H  5H  6H  7H  8H  9H  10H  11H  12H  13H  1S  2S  3S  4S  5S  6S  7S  8S  9S  10S  11S  12S  13S  1R  2R  ";
         //System.out.println(expected);
         assertEquals("should return list of cards now in deck", expected, actual);
     }
@@ -108,7 +110,7 @@ public class CardGameTests {
     public void Does_moveCards_moveCorrectQauntity_Test(){
         testGame.deal(testPlayer1, 10);
         testGame.moveCards(testPlayer1, testPlayer2, 7);
-        int actual = testPlayer2.hand.size();
+        int actual = testPlayer2.cards.size();
         int expected = 7;
         assertEquals("Should give player2 7 of player1's cards", expected, actual);
     }
@@ -116,8 +118,52 @@ public class CardGameTests {
     public void Does_moveCards_leaveCorrectQauntity_Test(){
         testGame.deal(testPlayer1, 10);
         testGame.moveCards(testPlayer1, testPlayer2, 7);
-        int actual = testPlayer1.hand.size();
+        int actual = testPlayer1.cards.size();
         int expected = 3;
         assertEquals("Should leave player1 3 cards", expected, actual);
+    }
+    @Test
+    public void GoFishConstructorTest(){
+        testGoFish = new GoFish();
+        int actual = testGoFish.player1.cards.size();
+        int expected = 7;
+        assertEquals("should return 7, cards dealt", expected, actual);
+    }
+    @Test
+    public void getHighestCardValueTest(){
+
+        testPlayer1 = new Player("test player");
+        Card card1 = new Card(1, 'D');
+        Card card2 = new Card(3, 'D');
+        testPlayer1.cards.add(card1);
+        testPlayer1.cards.add(testCard);
+        testPlayer1.cards.add(card2);
+
+        int actual = testPlayer1.getHighestCardValue();
+        int expected = 3;
+        assertEquals("should return 3, highest card in hand", expected, actual);
+    }
+    @Test
+    public void receiveCardsOfAskedValueTest(){
+        testPlayer1 = new Player("player 2");
+        testPlayer2 = new Player("player 2");
+        Card card1d = new Card(1, 'D');
+        Card card2d = new Card(2, 'D');
+        Card card3c = new Card(3, 'C');
+        Card card2h = new Card(2, 'H');
+        Card card2s = new Card(2, 'S');
+
+        testPlayer1.cards.add(card1d);
+        testPlayer1.cards.add(card3c);
+        testPlayer1.cards.add(card2d);
+
+        testPlayer2.cards.add(card2h);
+        testPlayer2.cards.add(card2s);
+
+        testPlayer2.receiveCardsOfAskedValue(testPlayer1, 3);
+        int actual = testPlayer2.cards.get(0).getCardValue();
+        int expected = 2;
+        assertEquals("should return 2, the highest value card now in p2 hand", expected, actual);
+
     }
 }
