@@ -11,7 +11,7 @@ public class Player extends CollectionOfCards {
     }
 
     private String name;
-    public Player book;
+    //public Player book;
 
     public Player(String playerName) {
         this.name = playerName;
