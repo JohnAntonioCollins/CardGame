@@ -19,7 +19,7 @@ public class Game {
         player2 = new Player("Player two");
     }
 
-    private void shuffleDeck() {
+    protected void shuffleDeck() {
         Collections.shuffle(deck.cards);
         for (int i = 0; i < deck.cards.size() - 1; i++) {
             if (deck.getCardAtIndex(i).getCardValue() == 0) {
@@ -29,7 +29,7 @@ public class Game {
         }
     }
 
-    public void deal(Player player, int quantityOfCards) {
+    protected void deal(Player player, int quantityOfCards) {
         int cardsToDeal = 1;
 
         do {
@@ -39,7 +39,7 @@ public class Game {
         }
         while (cardsToDeal <= quantityOfCards);
     }
-    public void moveCards(Player from, Player to, int quantityOfCards) {
+    public void moveSomeCards(Player from, Player to, int quantityOfCards) {
         int cardsMoved = 1;
         do {
             to.cards.add(from.cards.get(1));
@@ -48,4 +48,18 @@ public class Game {
         }
         while (cardsMoved <= quantityOfCards);
     }
+    public void moveSpecificCard(Player from, Player to, int fromIndex){
+                to.cards.add(from.getCardAtIndex(fromIndex));
+                from.cards.remove(fromIndex);
+    }
+    public void moveCardsIfValue(Player from, Player to, int value){
+        for (int j = 0; j < from.cards.size(); j++)
+            if(from.getCardAtIndex(j).getCardValue() == value){
+                moveSpecificCard(from, to, j);
+                j--;
+            }
+    }
+
+
+
 }

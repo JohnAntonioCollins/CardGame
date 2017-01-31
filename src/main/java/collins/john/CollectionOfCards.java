@@ -11,18 +11,19 @@ public class CollectionOfCards {
     private int highestCardValue = 0;
 
 
-
     public Card getCardAtIndex(int i) {
         return this.cards.get(i);
     }
+
     public String getAllCardsNow() {
         String currentCards = "";
         for (int i = 0; i < cards.size(); i++) {
-            currentCards += cards.get(i).getCardName() + "  ";
+            currentCards += cards.get(i).getCardName() + "  ";//two spaces
         }
         return currentCards;
-    }// end getDeckNow
-    public int getQuantityOfCards(){
+    }
+
+    public int getQuantityOfCards() {
         return cards.size();
     }
 

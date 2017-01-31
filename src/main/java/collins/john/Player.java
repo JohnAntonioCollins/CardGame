@@ -11,19 +11,21 @@ public class Player extends CollectionOfCards {
     }
 
     private String name;
+    public Player book;
 
-    public Player(String playerName){
+    public Player(String playerName) {
         this.name = playerName;
+        //this.book = new Player(playerName+"'s book");
     }
 
-    public void receiveCardsOfAskedValue(Player sender, int askedValue){
-        for (int i = 0; i < sender.cards.size(); i++) {
-            if(sender.getCardAtIndex(i).getCardValue() == askedValue){
-                this.cards.add(sender.getCardAtIndex(i));
-                sender.cards.remove(i);
+    public boolean hasAskedValue(int askedValue) {
+        for (int i = 0; i < this.cards.size(); i++) {
+            if (this.getCardAtIndex(i).getCardValue() == askedValue) {
+                return true;
             }
         }
+        return false;
     }
 
-
 }
+

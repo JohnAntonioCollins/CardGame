@@ -24,6 +24,7 @@ public class CardGameTests {
         testDeck = new Deck();
         testHand = new CollectionOfCards();
         testGame = new Game();
+        testGoFish = new GoFish();
         testPlayer1 = new Player("Player1");
         testPlayer2 = new Player("Player2");
     }
@@ -81,8 +82,9 @@ public class CardGameTests {
         int expected = 5;
         assertEquals("should deal 5 random cards to testPlayer", expected, actual);
     }
+
     @Test
-    public void doesGameRemoveDealtCardsFromDeck(){
+    public void doesGameRemoveDealtCardsFromDeck() {
         testGame.deal(testGame.player1, 5);
         int actual = testGame.deck.cards.size();
         int expected = 50;
@@ -106,31 +108,35 @@ public class CardGameTests {
         String expected = "Player One";
         assertEquals("should be name field of given Player", expected, actual);
     }
+
     @Test
-    public void Does_moveCards_moveCorrectQauntity_Test(){
+    public void Does_moveCards_moveCorrectQauntity_Test() {
         testGame.deal(testPlayer1, 10);
-        testGame.moveCards(testPlayer1, testPlayer2, 7);
+        testGame.moveSomeCards(testPlayer1, testPlayer2, 7);
         int actual = testPlayer2.cards.size();
         int expected = 7;
         assertEquals("Should give player2 7 of player1's cards", expected, actual);
     }
+
     @Test
-    public void Does_moveCards_leaveCorrectQauntity_Test(){
+    public void Does_moveCards_leaveCorrectQauntity_Test() {
         testGame.deal(testPlayer1, 10);
-        testGame.moveCards(testPlayer1, testPlayer2, 7);
+        testGame.moveSomeCards(testPlayer1, testPlayer2, 7);
         int actual = testPlayer1.cards.size();
         int expected = 3;
         assertEquals("Should leave player1 3 cards", expected, actual);
     }
+
     @Test
-    public void GoFishConstructorTest(){
+    public void GoFishConstructorTest() {
         testGoFish = new GoFish();
         int actual = testGoFish.player1.cards.size();
         int expected = 7;
         assertEquals("should return 7, cards dealt", expected, actual);
     }
+
     @Test
-    public void getHighestCardValueTest(){
+    public void getHighestCardValueTest() {
 
         testPlayer1 = new Player("test player");
         Card card1 = new Card(1, 'D');
@@ -143,8 +149,9 @@ public class CardGameTests {
         int expected = 3;
         assertEquals("should return 3, highest card in hand", expected, actual);
     }
+
     @Test
-    public void receiveCardsOfAskedValueTest(){
+    public void receiveCardsOfAskedValueTest() {
         testPlayer1 = new Player("player 2");
         testPlayer2 = new Player("player 2");
         Card card1d = new Card(1, 'D');
@@ -160,10 +167,160 @@ public class CardGameTests {
         testPlayer2.cards.add(card2h);
         testPlayer2.cards.add(card2s);
 
-        testPlayer2.receiveCardsOfAskedValue(testPlayer1, 3);
+        // testPlayer2.receiveCardsOfAskedValue(testPlayer1, 3);
         int actual = testPlayer2.cards.get(0).getCardValue();
         int expected = 2;
         assertEquals("should return 2, the highest value card now in p2 hand", expected, actual);
 
     }
+
+    @Test
+    public void checkForAskedValueTest() {
+        testPlayer1 = new Player("player 1");
+        testPlayer2 = new Player("player 2");
+        Card card1d = new Card(1, 'D');
+        Card card2d = new Card(2, 'D');
+        Card card3c = new Card(3, 'C');
+        Card card2h = new Card(2, 'H');
+        Card card2s = new Card(2, 'S');
+
+        testPlayer1.cards.add(card1d);
+        testPlayer1.cards.add(card2d);
+
+        testPlayer2.cards.add(card2h);
+        testPlayer2.cards.add(card2s);
+        testPlayer2.cards.add(card3c);
+
+        boolean actual = testPlayer2.hasAskedValue(3);
+        boolean expected = true;
+        assertEquals("should be true; p1 is asking for a 3 and p2 has a 3", expected, actual);
+    }
+
+    @Test
+    public void moveSpecificCardsTest() {
+        testGame = new Game();
+        testPlayer1 = new Player("P1");
+        testPlayer2 = new Player("P2");
+        Card card1d = new Card(1, 'D');
+        Card card2d = new Card(2, 'D');
+        Card card3c = new Card(3, 'C');
+        Card card2h = new Card(2, 'H');
+        Card card2s = new Card(2, 'S');
+
+        testPlayer1.cards.add(card1d);
+        testPlayer1.cards.add(card2d);
+
+        testPlayer2.cards.add(card2h);
+        testPlayer2.cards.add(card2s);
+        testPlayer2.cards.add(card3c);
+        System.out.println(testPlayer1.getAllCardsNow());
+        System.out.println(testPlayer2.getAllCardsNow());
+
+        testGame.moveSpecificCard(testPlayer1, testPlayer2, 1);
+
+        System.out.println(testPlayer1.getAllCardsNow());
+        System.out.println(testPlayer2.getAllCardsNow());
+
+        String actual = testPlayer2.getCardAtIndex(3).getCardName();
+        String expected = "2D";
+        assertEquals("should move card from p1, index 1, to p2, index 3", expected, actual);
+
+
+    }
+
+    @Test
+    public void moveCardsIfValueTest() {
+        testGame = new Game();
+        testPlayer1 = new Player("P1");
+        testPlayer2 = new Player("P2");
+        Card card1d = new Card(1, 'D');
+        Card card2d = new Card(2, 'D');
+        Card card3c = new Card(3, 'C');
+        Card card2h = new Card(2, 'H');
+        Card card2s = new Card(2, 'S');
+
+        testPlayer1.cards.add(card1d);
+        testPlayer1.cards.add(card2d);
+
+        testPlayer2.cards.add(card2h);
+        testPlayer2.cards.add(card2s);
+        testPlayer2.cards.add(card3c);
+        //System.out.println(testPlayer1.getAllCardsNow());
+        //System.out.println(testPlayer2.getAllCardsNow());
+
+        testGame.moveCardsIfValue(testPlayer2, testPlayer1, 2);
+
+        //System.out.println(testPlayer1.getAllCardsNow());
+        //System.out.println(testPlayer2.getAllCardsNow());
+
+        String actual = testPlayer1.getAllCardsNow();
+        String expected = "1D  2D  2H  2S  ";
+        assertEquals("should show p2 deck with moved cards", expected, actual);
+
+    }
+
+
+    @Test
+    public void GoFishDealsTest() {
+        //testGoFish.compareAndExchange(testGoFish.player1, testGoFish.player2, 2);
+        int actual = testGoFish.player1.cards.size();
+        int expected = 7;
+        assertEquals("p1 should now have 7 cards", expected, actual);
+    }
+
+
+    @Test
+    public void compareAndExchangeTest() {
+
+        testGoFish.player1.cards.removeAll(testGoFish.player1.cards);
+        testGoFish.player2.cards.removeAll(testGoFish.player2.cards);
+        System.out.println(testGoFish.player1.getAllCardsNow());
+        System.out.println(testGoFish.player2.getAllCardsNow());
+
+        Card card1d = new Card(1, 'D');
+        Card card2d = new Card(2, 'D');
+
+        Card card3c = new Card(3, 'C');
+        Card card3h = new Card(3, 'H');
+        Card card3d = new Card(3, 'D');
+        Card card3s = new Card(3, 'S');
+
+        Card card2h = new Card(2, 'H');
+        Card card4c = new Card(4, 'C');
+        Card card4s = new Card(4, 'S');
+        Card card4h = new Card(4, 'H');
+        Card card4d = new Card(4, 'D');
+
+
+        testGoFish.player1.cards.add(card1d);
+        testGoFish.player1.cards.add(card2d);
+
+        testGoFish.player2.cards.add(card3c);
+        testGoFish.player2.cards.add(card2h);
+        testGoFish.player2.cards.add(card4s);
+        testGoFish.player2.cards.add(card4c);
+       // testGoFish.player2.cards.add(card3c);
+        testGoFish.player2.cards.add(card3d);
+        testGoFish.player2.cards.add(card3s);
+        testGoFish.player2.cards.add(card2h);
+        testGoFish.player2.cards.add(card4h);
+        testGoFish.player2.cards.add(card4d);
+        testGoFish.player2.cards.add(card3h);
+        //testGoFish.player2.cards.add(card3c);
+        //testGoFish.player2.cards.add(card3c);
+
+        //System.out.println(testGoFish.player1.getAllCardsNow()+"\n");
+        //System.out.println(testGoFish.player2.getAllCardsNow()+"\n ____________________\n");
+
+        testGoFish.compareAndExchange(testGoFish.player1, testGoFish.player2, 4);
+
+        //System.out.println(testGoFish.player1.getAllCardsNow()+"\n");
+        //System.out.println(testGoFish.player2.getAllCardsNow());
+
+        String expected = "1D  2D  4S  4C  4H  4D  ";
+        String actual = testGoFish.player1.getAllCardsNow();
+        assertEquals("p1 should now have all the '4' cards", expected, actual);
+
+    }
+
 }
