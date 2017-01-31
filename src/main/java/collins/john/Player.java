@@ -11,11 +11,11 @@ public class Player extends CollectionOfCards {
     }
 
     private String name;
-    //public Player book;
+    //public CollectionOfCards book;
 
     public Player(String playerName) {
         this.name = playerName;
-        //this.book = new Player(playerName+"'s book");
+        //this.book = new CollectionOfCards();
     }
 
     public boolean hasAskedValue(int askedValue) {
@@ -25,6 +25,19 @@ public class Player extends CollectionOfCards {
             }
         }
         return false;
+    }
+    public boolean hasMatches(int askedValue){
+        int matches = 0;
+        for (int i = 0; i < this.cards.size(); i++) {
+            if (this.getCardAtIndex(i).getCardValue() == askedValue) {
+                matches++;
+            }
+            if (matches > 3){
+                return true;
+            }
+        }
+        return false;
+
     }
 
 }

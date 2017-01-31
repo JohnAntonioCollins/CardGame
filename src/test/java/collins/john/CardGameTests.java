@@ -322,5 +322,29 @@ public class CardGameTests {
         assertEquals("p1 should now have all the '4' cards", expected, actual);
 
     }
+    @Test
+    public void randomCardInHandTest(){
+        testGoFish.randomAskedCard();
+        int testCounter = 0;
+        //System.out.println(testGoFish.askedCard);
+        //System.out.println(testGoFish.player2.getAllCardsNow());
+        for (int i = 0; i < testGoFish.player2.cards.size()-1; i++) {
+            if(testGoFish.player2.cards.get(i).getCardValue() == testGoFish.askedCard){
+                testCounter++;
+            }
+        }
+        boolean actual = testCounter > 0;//testGoFish.askedCard >= 1 && testGoFish.askedCard <= 13;
+        boolean expected = true;
+        assertEquals("should be true, at least 1 match.", expected, actual);
+    }
+    @Test
+    public void randomCardInHandRANGETest() {
+        testGoFish.randomAskedCard();
+        //System.out.println(testGoFish.askedCard);
+        //System.out.println(testGoFish.player2.getAllCardsNow());
 
+        boolean actual = testGoFish.askedCard >= 1 && testGoFish.askedCard <= 13;
+        boolean expected = true;
+        assertEquals("should be true, all values are 1 to 13.", expected, actual);
+    }
 }

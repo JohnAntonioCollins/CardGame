@@ -8,14 +8,13 @@ public class GoFish extends Game {
     Player player2sBook;
     String greet;
     String info;
-    String computerAsk;
+    //String computerAsk;
     //String computerAnswer;
     String playerAsk;
     String waitForUser;
     String yourTurn;
     int askedCard;
     //boolean hasCard;
-
 
     public GoFish() {
 
@@ -27,28 +26,37 @@ public class GoFish extends Game {
         this.deal(player1, 7);
         this.deal(player2, 7);
 
-        info = "You are " + player1.getName() + " and the computer is " + player2.getName()+".\n";
-
-        askedCard = player2.getHighestCardValue();
-        computerAsk = " Do you have any " + askedCard + "'s?";
+        info = "You are " + player1.getName() + " and the computer is " + player2.getName() + ".\n\n" + "We're playing for books of four cards.";
+        //computerAsk = " Do you have any " + this.getAskedCard() + "'s?";
         waitForUser = "\n (press enter when ready) \n";
         yourTurn = "\n OK, now it's your turn. \n";
 
 
         playerAsk = "What card are you asking for? \n \n " + "(enter a card value)\n\n";
-        //player1.askCompareAndExchange(player2, askedValue);
-
-        //player2.askCompareAndExchange(player1);
-
-
-        //display refresh player1's cards on one line
 
     }
-    public String getPlayersBooks(Player whosBooks){
-        return whosBooks.getName()+" "+whosBooks.getAllCardsNow();
+
+    public String computerAsk() {
+        return " Do you have any " + this.askedCard + "'s?";
     }
 
-    public int getQuantityLeftInDeck(){
+    public void randomAskedCard() {
+        int randomIndex = (int) (Math.random() * (player2.cards.size() - 1));
+        this.askedCard = player2.cards.get(randomIndex).getCardValue();
+
+    }
+
+    public void randomTestTest() {
+        int randomIndex = (int) Math.random() * (player2.cards.size() - 1);
+        this.askedCard = player2.cards.get(randomIndex).getCardValue();
+
+    }
+
+    public String getPlayersBooks(Player whosBooks) {
+        return whosBooks.getName() + ": ~ " + whosBooks.getAllCardsNow() + " ~";
+    }
+
+    public int getQuantityLeftInDeck() {
         return deck.getQuantityOfCards();
     }
 
@@ -56,9 +64,12 @@ public class GoFish extends Game {
         this.askedCard = askedCard;
     }
 
-    public String showHand() {
-        return "\n your hand:      < " + player1.getAllCardsNow() + ">\n";
+    public int getAskedCard() {
+        return askedCard;
+    }
 
+    public String showHand() {
+        return "\n" + player1.getName() + "'s hand:      < " + player1.getAllCardsNow() + ">\n";
     }
 
     public void compareAndExchange(Player asking, Player beingAsked, int askedValue) {
@@ -69,7 +80,6 @@ public class GoFish extends Game {
                 if (beingAsked.getCardAtIndex(i).getCardValue() == askedValue) {
 
                     moveSpecificCard(beingAsked, asking, i);
-                    //beingAsked.cards.remove(i);
                     i--;
                 }
             }
@@ -78,6 +88,13 @@ public class GoFish extends Game {
         }
 
     }
+
+    public void moveMatchesToBook(Player player, Player book, int matchValue) {
+        if (player.hasMatches(matchValue)) {
+            compareAndExchange(book, player, matchValue);
+                    }
+    }
+
 
 
 }

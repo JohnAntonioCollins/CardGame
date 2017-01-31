@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12681972-f714-4cdf-a111-66f0393fc721" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/collins/john/CardGame.class" afterPath="$PROJECT_DIR$/target/classes/collins/john/CardGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/collins/john/GoFish.class" afterPath="$PROJECT_DIR$/target/classes/collins/john/GoFish.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/collins/john/Player.class" afterPath="$PROJECT_DIR$/target/classes/collins/john/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/collins/john/CardGameTests.class" afterPath="$PROJECT_DIR$/target/test-classes/collins/john/CardGameTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/CardGame.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/CardGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/GoFish.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/GoFish.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/Player.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/collins/john/CardGameTests.java" afterPath="$PROJECT_DIR$/src/test/java/collins/john/CardGameTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,28 +30,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CardGame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CardGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/CardGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-              <folding />
+            <state relative-caret-position="299">
+              <caret line="59" column="119" lean-forward="false" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoFish.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GoFish.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/GoFish.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+            <state relative-caret-position="218">
+              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
-                <element signature="e#1379#1380#0" expanded="true" />
-                <element signature="e#1427#1428#0" expanded="true" />
-                <element signature="e#1474#1475#0" expanded="true" />
-                <element signature="e#1516#1517#0" expanded="true" />
+                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1770#1771#0" expanded="true" />
+                <element signature="e#1817#1818#0" expanded="true" />
+                <element signature="e#1859#1860#0" expanded="true" />
+                <element signature="e#1892#1893#0" expanded="true" />
+                <element signature="e#1924#1925#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +64,8 @@
       <file leaf-file-name="CardGameTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/CardGameTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="321" column="79" lean-forward="false" selection-start-line="321" selection-start-column="79" selection-end-line="321" selection-end-column="79" />
+            <state relative-caret-position="4086">
+              <caret line="340" column="37" lean-forward="false" selection-start-line="340" selection-start-column="37" selection-end-line="340" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,8 +76,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state relative-caret-position="225">
+              <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -76,8 +86,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+            <state relative-caret-position="45">
+              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -96,7 +106,7 @@
       <file leaf-file-name="CollectionOfCards.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/CollectionOfCards.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
+            <state relative-caret-position="90">
               <caret line="20" column="74" lean-forward="false" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
               <folding>
                 <element signature="e#592#593#0" expanded="true" />
@@ -143,11 +153,11 @@
         <option value="$PROJECT_DIR$/src/main/java/collins/john/scratchPad" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/Deck.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/CollectionOfCards.java" />
-        <option value="$PROJECT_DIR$/src/main/java/collins/john/Game.java" />
-        <option value="$PROJECT_DIR$/src/test/java/collins/john/CardGameTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/collins/john/CardGame.java" />
+        <option value="$PROJECT_DIR$/src/test/java/collins/john/CardGameTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/collins/john/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/GoFish.java" />
+        <option value="$PROJECT_DIR$/src/main/java/collins/john/CardGame.java" />
       </list>
     </option>
   </component>
@@ -311,32 +321,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.CardGame">
-    <configuration default="false" name="CardGameTests.askCompareAndExchange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="collins.john.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="EnumTest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="collins.john" />
-      <option name="MAIN_CLASS_NAME" value="collins.john.CardGameTests" />
-      <option name="METHOD_NAME" value="askCompareAndExchange" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="CardGameTests.compareAndExchangeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -350,58 +334,6 @@
       <option name="PACKAGE_NAME" value="collins.john" />
       <option name="MAIN_CLASS_NAME" value="collins.john.CardGameTests" />
       <option name="METHOD_NAME" value="compareAndExchangeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="CardGameTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="collins.john.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="EnumTest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="collins.john" />
-      <option name="MAIN_CLASS_NAME" value="collins.john.CardGameTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="CardGameTests.GoFishDealsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="collins.john.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="EnumTest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="collins.john" />
-      <option name="MAIN_CLASS_NAME" value="collins.john.CardGameTests" />
-      <option name="METHOD_NAME" value="GoFishDealsTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -433,6 +365,84 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="EnumTest" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CardGameTests.randomCardInHandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="collins.john.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EnumTest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="collins.john" />
+      <option name="MAIN_CLASS_NAME" value="collins.john.CardGameTests" />
+      <option name="METHOD_NAME" value="randomCardInHandTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CardGameTests.randomCardInHandRANGETest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="collins.john.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EnumTest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="collins.john" />
+      <option name="MAIN_CLASS_NAME" value="collins.john.CardGameTests" />
+      <option name="METHOD_NAME" value="randomCardInHandRANGETest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CardGameTests.doesGameDealCorrectQuantityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="collins.john.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EnumTest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="collins.john" />
+      <option name="MAIN_CLASS_NAME" value="collins.john.CardGameTests" />
+      <option name="METHOD_NAME" value="doesGameDealCorrectQuantityTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -816,19 +826,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CardGameTests.askCompareAndExchange" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CardGameTests.compareAndExchangeTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CardGameTests" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CardGameTests.GoFishDealsTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CardGame" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CardGameTests.compareAndExchangeTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.CardGame" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CardGameTests.randomCardInHandTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CardGameTests.randomCardInHandRANGETest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CardGameTests.doesGameDealCorrectQuantityTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.CardGame" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CardGameTests.compareAndExchangeTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CardGameTests.GoFishDealsTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CardGameTests" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CardGameTests.askCompareAndExchange" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CardGameTests.doesGameDealCorrectQuantityTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CardGameTests.randomCardInHandRANGETest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CardGameTests.randomCardInHandTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CardGameTests.compareAndExchangeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -845,44 +855,44 @@
       <workItem from="1484901770363" duration="1982000" />
       <workItem from="1485552209040" duration="59701000" />
       <workItem from="1485783652137" duration="1129000" />
-      <workItem from="1485801620455" duration="30759000" />
+      <workItem from="1485801620455" duration="49798000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 47m 25s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_doesGameDealCorrectQuantityTest - 2017.01.31 at 05h 11m 54s.xml">
+      <configuration name="CardGameTests.doesGameDealCorrectQuantityTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 50m 26s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_doesGameDealCorrectQuantityTest - 2017.01.31 at 05h 12m 47s.xml">
+      <configuration name="CardGameTests.doesGameDealCorrectQuantityTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 51m 02s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandRANGETest - 2017.01.31 at 05h 06m 34s.xml">
+      <configuration name="CardGameTests.randomCardInHandRANGETest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 54m 49s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandTest - 2017.01.31 at 04h 58m 54s.xml">
+      <configuration name="CardGameTests.randomCardInHandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 55m 31s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandTest - 2017.01.31 at 04h 59m 50s.xml">
+      <configuration name="CardGameTests.randomCardInHandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 55m 57s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandTest - 2017.01.31 at 05h 00m 11s.xml">
+      <configuration name="CardGameTests.randomCardInHandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 57m 29s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandTest - 2017.01.31 at 05h 00m 17s.xml">
+      <configuration name="CardGameTests.randomCardInHandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 22h 59m 28s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandTest - 2017.01.31 at 05h 00m 20s.xml">
+      <configuration name="CardGameTests.randomCardInHandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 23h 00m 25s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandTest - 2017.01.31 at 05h 00m 23s.xml">
+      <configuration name="CardGameTests.randomCardInHandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardGameTests_compareAndExchangeTest - 2017.01.30 at 23h 01m 12s.xml">
-      <configuration name="CardGameTests.compareAndExchangeTest" configurationId="JUnit" />
+    <history-entry file="CardGameTests_randomCardInHandTest - 2017.01.31 at 05h 05m 01s.xml">
+      <configuration name="CardGameTests.randomCardInHandTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107387000" />
+    <option name="totallyTimeSpent" value="126426000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -895,7 +905,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -907,9 +917,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37444934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36417034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23182553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -961,7 +971,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,7 +1075,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1105,7 +1119,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,7 +1152,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,9 +1223,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/CardGameTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4086">
+          <caret line="340" column="37" lean-forward="false" selection-start-line="340" selection-start-column="37" selection-end-line="340" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/CollectionOfCards.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="90">
           <caret line="20" column="74" lean-forward="false" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
           <folding>
             <element signature="e#592#593#0" expanded="true" />
@@ -1215,51 +1243,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/CardGameTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="321" column="79" lean-forward="false" selection-start-line="321" selection-start-column="79" selection-end-line="321" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/CardGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+        <state relative-caret-position="225">
+          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/GoFish.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        <state relative-caret-position="218">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <element signature="e#1265#1266#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1379#1380#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#1924#1925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/CardGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="59" column="119" lean-forward="false" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
