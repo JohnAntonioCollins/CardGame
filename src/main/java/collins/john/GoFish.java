@@ -3,20 +3,25 @@ package collins.john;
 /**
  * Created by johncollins on 1/29/17.
  */
-public class GoFish extends Game {
+public class GoFish extends Game
+{
     Player player1sBook;
     Player player2sBook;
     String greet;
     String info;
-    //String computerAsk;
-    //String computerAnswer;
+
     String playerAsk;
     String waitForUser;
     String yourTurn;
     int askedCard;
-    //boolean hasCard;
 
-    public GoFish() {
+    String explainWhyCardMoved;
+
+
+    public GoFish()
+    {
+
+        explainWhyCardMoved = "~card moved from player to other player~";
 
         player1sBook = new Player("player one's books");
         player2sBook = new Player("player two's books");
@@ -36,65 +41,83 @@ public class GoFish extends Game {
 
     }
 
-    public String computerAsk() {
+    public String computerAsk()
+    {
         return " Do you have any " + this.askedCard + "'s?";
     }
 
-    public void randomAskedCard() {
+    public void setAskedCardToRandomCardInPlayer2Hand()
+    {
         int randomIndex = (int) (Math.random() * (player2.cards.size() - 1));
         this.askedCard = player2.cards.get(randomIndex).getCardValue();
 
     }
 
-    public void randomTestTest() {
+    public void randomTestTest()
+    {
         int randomIndex = (int) Math.random() * (player2.cards.size() - 1);
         this.askedCard = player2.cards.get(randomIndex).getCardValue();
 
     }
 
-    public String getPlayersBooks(Player whosBooks) {
+    public String getPlayersBooks(Player whosBooks)
+    {
         return whosBooks.getName() + ": ~ " + whosBooks.getAllCardsNow() + " ~";
     }
 
-    public int getQuantityLeftInDeck() {
+    public int getQuantityLeftInDeck()
+    {
         return deck.getQuantityOfCards();
     }
 
-    public void setAskedCard(int askedCard) {
+    public void setAskedCard(int askedCard)
+    {
         this.askedCard = askedCard;
     }
 
-    public int getAskedCard() {
-        return askedCard;
-    }
+    //    public int getAskedCard() {
+    //        return askedCard;
+    //    }
 
-    public String showHand() {
+    public String showHand()
+    {
         return "\n" + player1.getName() + "'s hand:      < " + player1.getAllCardsNow() + ">\n";
     }
 
-    public void compareAndExchange(Player asking, Player beingAsked, int askedValue) {
-        if (beingAsked.hasAskedValue(askedValue)) {
+    public void transferMatchingCards(Player asking, Player beingAsked, int askedValue)
+    {
+        if (beingAsked.hasCard(askedValue))
+        {
 
-            for (int i = 0; i < beingAsked.cards.size(); i++) {
+            for (int i = 0; i < beingAsked.cards.size(); i++)
+            {  boolean print = false;
 
-                if (beingAsked.getCardAtIndex(i).getCardValue() == askedValue) {
+                if (beingAsked.getCardAtIndex(i).getCardValue() == askedValue)
+                {
 
-                    moveSpecificCard(beingAsked, asking, i);
+                    moveCardFromPlayerByIndex(beingAsked, asking, i);
                     i--;
+                    print = true;
                 }
+                if(print){System.out.println(explainWhyCardMoved);}
+
             }
-        } else {
+        } else
+        {
             this.deal(asking, 1);
+            System.out.println("~player drew from deck~" + "\n");
         }
-
     }
 
-    public void moveMatchesToBook(Player player, Player book, int matchValue) {
-        if (player.hasMatches(matchValue)) {
-            compareAndExchange(book, player, matchValue);
-                    }
+    public void moveMatchesToBook(Player player, Player book, int matchValue)
+    {
+        if (player.hasMatches(matchValue))
+        {
+            explainWhyCardMoved = "~card moved to book~";
+            transferMatchingCards(book, player, matchValue);
+            explainWhyCardMoved = "~card moved from player to other player~";
+        }
     }
-
 
 
 }

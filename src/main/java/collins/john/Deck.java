@@ -8,9 +8,9 @@ public class Deck extends CollectionOfCards{
     public Deck(){
         this.makeDeck();
     }
-    //private ArrayList<Card> deck = cards;
+
     public void makeDeck() {
-        Card card = new Card(0, 'e');// 'error card' 0e
+        Card card = new Card(0, 'e');// 'error card' 0e never used
         cards.add(card);
         for (int i = 1; i < 55; i++) {
             if (i < 14) {

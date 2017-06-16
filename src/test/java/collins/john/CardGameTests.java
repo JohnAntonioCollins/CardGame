@@ -191,7 +191,7 @@ public class CardGameTests {
         testPlayer2.cards.add(card2s);
         testPlayer2.cards.add(card3c);
 
-        boolean actual = testPlayer2.hasAskedValue(3);
+        boolean actual = testPlayer2.hasCard(3);
         boolean expected = true;
         assertEquals("should be true; p1 is asking for a 3 and p2 has a 3", expected, actual);
     }
@@ -216,7 +216,7 @@ public class CardGameTests {
         System.out.println(testPlayer1.getAllCardsNow());
         System.out.println(testPlayer2.getAllCardsNow());
 
-        testGame.moveSpecificCard(testPlayer1, testPlayer2, 1);
+        testGame.moveCardFromPlayerByIndex(testPlayer1, testPlayer2, 1);
 
         System.out.println(testPlayer1.getAllCardsNow());
         System.out.println(testPlayer2.getAllCardsNow());
@@ -248,7 +248,7 @@ public class CardGameTests {
         //System.out.println(testPlayer1.getAllCardsNow());
         //System.out.println(testPlayer2.getAllCardsNow());
 
-        testGame.moveCardsIfValue(testPlayer2, testPlayer1, 2);
+        testGame.moveCardsByValue(testPlayer2, testPlayer1, 2);
 
         //System.out.println(testPlayer1.getAllCardsNow());
         //System.out.println(testPlayer2.getAllCardsNow());
@@ -262,7 +262,7 @@ public class CardGameTests {
 
     @Test
     public void GoFishDealsTest() {
-        //testGoFish.compareAndExchange(testGoFish.player1, testGoFish.player2, 2);
+        //testGoFish.transferMatchingCards(testGoFish.player1, testGoFish.player2, 2);
         int actual = testGoFish.player1.cards.size();
         int expected = 7;
         assertEquals("p1 should now have 7 cards", expected, actual);
@@ -312,7 +312,7 @@ public class CardGameTests {
         //System.out.println(testGoFish.player1.getAllCardsNow()+"\n");
         //System.out.println(testGoFish.player2.getAllCardsNow()+"\n ____________________\n");
 
-        testGoFish.compareAndExchange(testGoFish.player1, testGoFish.player2, 4);
+        testGoFish.transferMatchingCards(testGoFish.player1, testGoFish.player2, 4);
 
         //System.out.println(testGoFish.player1.getAllCardsNow()+"\n");
         //System.out.println(testGoFish.player2.getAllCardsNow());
@@ -324,7 +324,7 @@ public class CardGameTests {
     }
     @Test
     public void randomCardInHandTest(){
-        testGoFish.randomAskedCard();
+        testGoFish.setAskedCardToRandomCardInPlayer2Hand();
         int testCounter = 0;
         //System.out.println(testGoFish.askedCard);
         //System.out.println(testGoFish.player2.getAllCardsNow());
@@ -339,12 +339,17 @@ public class CardGameTests {
     }
     @Test
     public void randomCardInHandRANGETest() {
-        testGoFish.randomAskedCard();
+        testGoFish.setAskedCardToRandomCardInPlayer2Hand();
         //System.out.println(testGoFish.askedCard);
         //System.out.println(testGoFish.player2.getAllCardsNow());
 
         boolean actual = testGoFish.askedCard >= 1 && testGoFish.askedCard <= 13;
         boolean expected = true;
         assertEquals("should be true, all values are 1 to 13.", expected, actual);
+    }
+
+    @Test
+    public void doesCardDrawnFromDeckThatMakesABookCauseABookToBetransferedToPlayersBooks(){
+
     }
 }

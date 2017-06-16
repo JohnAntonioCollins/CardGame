@@ -10,10 +10,11 @@ public class CollectionOfCards {
 
     private int highestCardValue = 0;
 
-
     public Card getCardAtIndex(int i) {
         return this.cards.get(i);
     }
+
+    public int indexOfNewestCard() { return this.cards.size()-1; }
 
     public String getAllCardsNow() {
         String currentCards = "";

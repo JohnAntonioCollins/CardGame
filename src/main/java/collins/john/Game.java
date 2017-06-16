@@ -10,7 +10,6 @@ public class Game {
     Deck deck;
     Player player1;
     Player player2;
-    //int cardsToDeal = 1;
 
     public Game() {
         deck = new Deck();
@@ -25,7 +24,6 @@ public class Game {
             if (deck.getCardAtIndex(i).getCardValue() == 0) {
                 Collections.swap(deck.cards, i, 0);
             }
-
         }
     }
 
@@ -48,14 +46,14 @@ public class Game {
         }
         while (cardsMoved <= quantityOfCards);
     }
-    public void moveSpecificCard(Player from, Player to, int fromIndex){
+    public void moveCardFromPlayerByIndex(Player from, Player to, int fromIndex){
                 to.cards.add(from.getCardAtIndex(fromIndex));
                 from.cards.remove(fromIndex);
     }
-    public void moveCardsIfValue(Player from, Player to, int value){
+    public void moveCardsByValue(Player from, Player to, int value){
         for (int j = 0; j < from.cards.size(); j++)
             if(from.getCardAtIndex(j).getCardValue() == value){
-                moveSpecificCard(from, to, j);
+                moveCardFromPlayerByIndex(from, to, j);
                 j--;
             }
     }

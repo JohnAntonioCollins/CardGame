@@ -20,11 +20,14 @@ public class CardGame {
         System.out.println(goFish.showHand());
 
         do {
-            goFish.randomAskedCard();
+            goFish.setAskedCardToRandomCardInPlayer2Hand();
             System.out.println(goFish.computerAsk());
             p2scan.nextLine();
-            goFish.compareAndExchange(goFish.player2, goFish.player1, goFish.askedCard);
+            goFish.transferMatchingCards(goFish.player2, goFish.player1, goFish.askedCard);
+
             goFish.moveMatchesToBook(goFish.player2, goFish.player2sBook, goFish.askedCard);
+            goFish.moveMatchesToBook(goFish.player2, goFish.player2sBook, goFish.player2.indexOfNewestCard());
+
             System.out.println(goFish.getPlayersBooks(goFish.player2sBook));
 
             System.out.println(goFish.yourTurn);
@@ -32,27 +35,27 @@ public class CardGame {
 
             System.out.println(goFish.playerAsk);
 
-            try { int errorCounter = p1scan.nextInt();
+            try { int userAskedCard = p1scan.nextInt();
 
-                if (!(errorCounter > 0 && errorCounter < 14)) {
+                if (!(userAskedCard > 0 && userAskedCard < 14)) {
                     System.out.println("I don't think the cards are numbered that way.\nChoose a card in your hand.");
                     p1scan.nextLine();
                 }
-                goFish.setAskedCard(errorCounter);
+                goFish.setAskedCard(userAskedCard);
 
             } catch (InputMismatchException ex) {
                 System.out.println("I don't understand that. Enter a card value between 1 and 13 next time.");
 
             }
 
-            //goFish.setAskedCard(p1scan.nextInt());
             p1scan.nextLine();
 
-            goFish.compareAndExchange(goFish.player1, goFish.player2, goFish.askedCard);
+            goFish.transferMatchingCards(goFish.player1, goFish.player2, goFish.askedCard);
             goFish.moveMatchesToBook(goFish.player1, goFish.player1sBook, goFish.askedCard);
+            goFish.moveMatchesToBook(goFish.player1, goFish.player1sBook, goFish.player1.indexOfNewestCard());
             System.out.println(goFish.showHand());
             System.out.println(goFish.getPlayersBooks(goFish.player1sBook));
-            //scanner.nextLine();
+
             System.out.println(goFish.waitForUser);
             p1scan.nextLine();
 
