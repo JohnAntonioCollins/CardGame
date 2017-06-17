@@ -30,6 +30,6 @@ Exception condition:
  	at java.util.ArrayList.get(ArrayList.java:429)
  	at collins.john.Game.deal(Game.java:34)
  	at collins.john.GoFish.transferMatchingCards(GoFish.java:103)
- 	at collins.john.CardGame.main(CardGame.java:60)
+ 	at collins.john.Main.main(CardGame.java:60)
 
  Process finished with exit code 1"

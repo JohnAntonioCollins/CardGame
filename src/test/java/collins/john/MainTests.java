@@ -8,7 +8,8 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by johncollins on 1/27/17.
  */
-public class CardGameTests {
+public class MainTests
+{
 
     Card testCard;
     Deck testDeck;
@@ -324,26 +325,26 @@ public class CardGameTests {
     }
     @Test
     public void randomCardInHandTest(){
-        testGoFish.setAskedCardToRandomCardInPlayer2Hand();
+        testGoFish.setAskedCardToRandomCardInPlayer2sHand();
         int testCounter = 0;
-        //System.out.println(testGoFish.askedCard);
+        //System.out.println(testGoFish.askedCardValue);
         //System.out.println(testGoFish.player2.getAllCardsNow());
         for (int i = 0; i < testGoFish.player2.cards.size()-1; i++) {
-            if(testGoFish.player2.cards.get(i).getCardValue() == testGoFish.askedCard){
+            if(testGoFish.player2.cards.get(i).getCardValue() == testGoFish.askedCardValue){
                 testCounter++;
             }
         }
-        boolean actual = testCounter > 0;//testGoFish.askedCard >= 1 && testGoFish.askedCard <= 13;
+        boolean actual = testCounter > 0;//testGoFish.askedCardValue >= 1 && testGoFish.askedCardValue <= 13;
         boolean expected = true;
         assertEquals("should be true, at least 1 match.", expected, actual);
     }
     @Test
     public void randomCardInHandRANGETest() {
-        testGoFish.setAskedCardToRandomCardInPlayer2Hand();
-        //System.out.println(testGoFish.askedCard);
+        testGoFish.setAskedCardToRandomCardInPlayer2sHand();
+        //System.out.println(testGoFish.askedCardValue);
         //System.out.println(testGoFish.player2.getAllCardsNow());
 
-        boolean actual = testGoFish.askedCard >= 1 && testGoFish.askedCard <= 13;
+        boolean actual = testGoFish.askedCardValue >= 1 && testGoFish.askedCardValue <= 13;
         boolean expected = true;
         assertEquals("should be true, all values are 1 to 13.", expected, actual);
     }

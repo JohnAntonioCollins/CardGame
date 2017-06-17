@@ -4,7 +4,7 @@ import java.util.Collections;
 
 /**
  * Created by johncollins on 1/28/17.
- * Game is an abstract class that makes a shuffled deck, a player, and has a deal function.
+ * Game is an abstract class that makes a shuffled deck, 2 players, and has a deal function.
  */
 public class Game {
     Deck deck;
@@ -14,8 +14,8 @@ public class Game {
     public Game() {
         deck = new Deck();
         shuffleDeck();
-        player1 = new Player("Player One");
-        player2 = new Player("Player two");
+//        player1 = new Player("Player One");
+//        player2 = new Player("Player two");
     }
 
     protected void shuffleDeck() {
