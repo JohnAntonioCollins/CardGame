@@ -1,47 +1,43 @@
 package collins.john;
 
-import java.util.ArrayList;
-
 /**
  * Created by johncollins on 1/27/17.
  */
-public class Deck {
-    ArrayList<Card> deck = new ArrayList<Card>();
-    int cardValue = 1;
+public class Deck extends CollectionOfCards{
 
-    public Deck() {
-        for (int i = 0; i < 53; i++) {
+    public Deck(){
+        this.makeDeck();
+    }
+
+    public void makeDeck() {
+        Card card = new Card(0, 'e');// 'error card' 0e never used
+        cards.add(card);
+        for (int i = 1; i < 55; i++) {
             if (i < 14) {
-                Card card = new Card(i, 'C');
-                deck.add(card);
+                card = new Card(i, 'C');
+                cards.add(card);
             }
             if (i >= 14 && i < 27) {
 
-                Card card = new Card(i-13, 'D');
-                deck.add(card);
+                card = new Card(i - 13, 'D');
+                cards.add(card);
             }
             if (i >= 27 && i < 40) {
 
-                Card card = new Card(i-26, 'H');
-                deck.add(card);
+                card = new Card(i - 26, 'H');
+                cards.add(card);
             }
-            if (i >= 40) {
+            if (i >= 40 && i < 53) {
 
-                Card card = new Card(i-39, 'S');
-                deck.add(card);
+                card = new Card(i - 39, 'S');
+                cards.add(card);
+            }
+            if (i >= 53 && i < 55) {
+
+                card = new Card(i - 52, 'R');// jokeR 1, jokeR 2.
+                cards.add(card);
             }
         }
         return;
-    }//end Deck
-
-    public Card getDeckIndex(int i) {
-        return deck.get(i);
-    }
-    /*
-    putCard(){
-
-    }
-
-    takeCard(){}
-    */
+    }//end makeDeck
 }

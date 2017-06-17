@@ -14,24 +14,16 @@ public class Card{
         this.suit = suit;
         }
 
-    public String getCard(){
-        String cARD = ((Integer.toString(this.cardValue) + this.suit));
-        return cARD;
+    public String getCardName(){
+        String card = ((Integer.toString(this.cardValue) + this.suit));
+        return card;
         }
 
     public int getCardValue() {
         return cardValue;
     }
 
-    public void setCardValue(int cardValue) {
-        this.cardValue = cardValue;
-    }
-
     public char getSuit() {
         return suit;
-    }
-
-    public void setSuit(char suit) {
-        this.suit = suit;
     }
 }

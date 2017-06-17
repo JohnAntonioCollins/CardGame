@@ -1,0 +1,19 @@
+
+
+"0e"+"\n"+"1C"+"\n"+"2C"+"\n"+"3C"+"\n"+"4C"+"\n"+"5C"+"\n"+"6C"+"\n"+"7C"+"\n"+"8C"+"\n"+"9C"+"\n"+"10C"+"\n"+"11C"+"\n"+"12C"+"\n"+"13C"+"\n"+"1D"+"\n"+"2D"+"\n"+"3D"+"\n"+"4D"+"\n"+"5D"+"\n"+"6D"+"\n"+"7D"+"\n"+"8D"+"\n"+"9D"+"\n"+"10D"+"\n"+"11D"+"\n"+"12D"+"\n"+"13D"+"\n"+"1H"+"\n"+"2H"+"\n"+"3H"+"\n"+"4H"+"\n"+"5H"+"\n"+"6H"+"\n"+"7H"+"\n"+"8H"+"\n"+"9H"+"\n"+"10H"+"\n"+"11H"+"\n"+"12H"+"\n"+"13H"+"\n"+"1S"+"\n"+"2S"+"\n"+"3S"+"\n"+"4S"+"\n"+"5S"+"\n"+"6S"+"\n"+"7S"+"\n"+"8S"+"\n"+"9S"+"\n"+"10S"+"\n"+"11S"+"\n"+"12S"+"\n"+"13S"+"\n"+"1R"+"\n"+"2R"
+
+
+https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
+To initialize an array a of n elements to a randomly shuffled copy of source, both 0-based:
+  for i from 0 to n − 1 do
+      j ← random integer such that 0 ≤ j ≤ i
+      if j ≠ i
+          a[i] ← a[j]
+      a[j] ← source[i]
+
+http://stackoverflow.com/questions/15963549/arraylist-swap-elements
+      You can use Collections.swap(List<?> list, int i, int j);
+
+Oracle javadocs:
+      static void	shuffle(List<?> list)
+      Randomly permutes the specified list using a default source of randomness.
