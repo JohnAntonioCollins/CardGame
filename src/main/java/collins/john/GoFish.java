@@ -20,25 +20,19 @@ public class GoFish extends Game
 
     public GoFish()
     {
-
+        greet = " The game is GoFish! \n";
+        info = "You are " + player1.getName() + " and the computer is " + player2.getName() + ".\n\n" + "We're playing for books of four cards.";
+        waitForUser = "\n (press enter when ready) \n";
+        yourTurn = "\n OK, now it's your turn. \n";
+        playerAsk = "What card are you asking for? \n \n " + "(enter a card value)\n\n";
         explainWhyCardMoved = "~card moved from player to other player~";
 
         player1sBook = new Player("player one's books");
         player2sBook = new Player("player two's books");
 
-        greet = " The game is GoFish! \n";
         this.shuffleDeck();
         this.deal(player1, 7);
         this.deal(player2, 7);
-
-        info = "You are " + player1.getName() + " and the computer is " + player2.getName() + ".\n\n" + "We're playing for books of four cards.";
-        //computerAsk = " Do you have any " + this.getAskedCard() + "'s?";
-        waitForUser = "\n (press enter when ready) \n";
-        yourTurn = "\n OK, now it's your turn. \n";
-
-
-        playerAsk = "What card are you asking for? \n \n " + "(enter a card value)\n\n";
-
     }
 
     public String computerAsk()
@@ -50,14 +44,12 @@ public class GoFish extends Game
     {
         int randomIndex = (int) (Math.random() * (player2.cards.size() - 1));
         this.askedCard = player2.cards.get(randomIndex).getCardValue();
-
     }
 
     public void randomTestTest()
     {
         int randomIndex = (int) Math.random() * (player2.cards.size() - 1);
         this.askedCard = player2.cards.get(randomIndex).getCardValue();
-
     }
 
     public String getPlayersBooks(Player whosBooks)
@@ -84,7 +76,6 @@ public class GoFish extends Game
     {
         if (beingAsked.hasCard(askedValue))
         {
-
             for (int i = 0; i < beingAsked.cards.size(); i++)
             {  boolean print = false;
 
@@ -96,13 +87,11 @@ public class GoFish extends Game
                     print = true;
                 }
                 if(print){System.out.println(explainWhyCardMoved);}
-
             }
         } else
         {
             this.deal(asking, 1);
             System.out.println("~player drew from deck~" + "\n");
-
         }
     }
 

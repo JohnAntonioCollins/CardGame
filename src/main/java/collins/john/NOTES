@@ -1,1 +1,35 @@
+found bug: computer asks for "1's" when human just pulled the last 1 from the deck and put down a book of 1's.
+player 2 / computer will ask for "1's" when it has none. check the random ask method.
 
+after previous bug fixes, game crashes on any game-over condition due to index out of bounds. investigate newest methods.
+Exception condition:
+
+" Do you have any 8's?
+ n
+ ~player drew from deck~
+
+ ~card moved to book~
+ ~card moved to book~
+ ~card moved to book~
+ ~card moved to book~
+ player two's books: ~ 3S  3C  3H  3D  13S  13D  13H  13C  12D  12C  12S  12H  11D  11S  11C  11H  8D  8S  8H  8C   ~
+
+  OK, now it's your turn.
+
+
+ Player One's hand:      < 2H  >
+
+ What card are you asking for?
+
+  (enter a card value)
+
+
+ 2
+ Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+ 	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+ 	at java.util.ArrayList.get(ArrayList.java:429)
+ 	at collins.john.Game.deal(Game.java:34)
+ 	at collins.john.GoFish.transferMatchingCards(GoFish.java:103)
+ 	at collins.john.CardGame.main(CardGame.java:60)
+
+ Process finished with exit code 1"
