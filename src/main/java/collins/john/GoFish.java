@@ -106,6 +106,7 @@ public class GoFish extends Game
         {
             this.deal(asking, 1);
             System.out.println("~player drew from deck~" + "\n");
+
         }
     }
 

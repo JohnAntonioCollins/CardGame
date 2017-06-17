@@ -26,7 +26,7 @@ public class CardGame {
             goFish.transferMatchingCards(goFish.player2, goFish.player1, goFish.askedCard);
 
             goFish.moveMatchesToBook(goFish.player2, goFish.player2sBook, goFish.askedCard);
-            goFish.moveMatchesToBook(goFish.player2, goFish.player2sBook, goFish.player2.indexOfNewestCard());
+            goFish.moveMatchesToBook(goFish.player2, goFish.player2sBook, goFish.player2.valueOfNewestCard());
 
             System.out.println(goFish.getPlayersBooks(goFish.player2sBook));
 
@@ -52,7 +52,7 @@ public class CardGame {
 
             goFish.transferMatchingCards(goFish.player1, goFish.player2, goFish.askedCard);
             goFish.moveMatchesToBook(goFish.player1, goFish.player1sBook, goFish.askedCard);
-            goFish.moveMatchesToBook(goFish.player1, goFish.player1sBook, goFish.player1.indexOfNewestCard());
+            goFish.moveMatchesToBook(goFish.player1, goFish.player1sBook, goFish.player1.valueOfNewestCard());
             System.out.println(goFish.showHand());
             System.out.println(goFish.getPlayersBooks(goFish.player1sBook));
 

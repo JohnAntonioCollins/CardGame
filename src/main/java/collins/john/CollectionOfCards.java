@@ -14,6 +14,8 @@ public class CollectionOfCards {
         return this.cards.get(i);
     }
 
+    public int valueOfNewestCard(){ return getCardAtIndex(indexOfNewestCard()).getCardValue();}
+
     public int indexOfNewestCard() { return this.cards.size()-1; }
 
     public String getAllCardsNow() {
