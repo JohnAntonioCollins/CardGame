@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12681972-f714-4cdf-a111-66f0393fc721" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/CardGame.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/CardGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/CollectionOfCards.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/CollectionOfCards.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/GoFish.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/GoFish.java" />
-    </list>
+    <list default="true" id="12681972-f714-4cdf-a111-66f0393fc721" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
