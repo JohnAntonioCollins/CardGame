@@ -3,7 +3,8 @@ package collins.john;
 /**
  * Created by johncollins on 1/27/17.
  */
-public class Deck extends CollectionOfCards{
+public class Deck extends BunchOfCards
+{
 
     public Deck(){
         this.makeDeck();

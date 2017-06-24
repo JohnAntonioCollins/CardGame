@@ -1,3 +1,7 @@
+disign question: if there are multiple players, should they move their cards directly between eachother or should there be a 'card mover' that handles all moves?
+
+
+
 found bug: computer asks for "1's" when human just pulled the last 1 from the deck and put down a book of 1's.
 player 2 / computer will ask for "1's" when it has none. check the random ask method.
 
@@ -28,8 +32,8 @@ Exception condition:
  Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
  	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
  	at java.util.ArrayList.get(ArrayList.java:429)
- 	at collins.john.Game.deal(Game.java:34)
- 	at collins.john.GoFish.transferMatchingCards(GoFish.java:103)
+ 	at collins.john.CardMover.deal(Game.java:34)
+ 	at tradePlayerCards(GoFish.java:103)
  	at collins.john.Main.main(CardGame.java:60)
 
  Process finished with exit code 1"

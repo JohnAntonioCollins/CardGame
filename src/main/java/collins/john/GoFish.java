@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by johncollins on 1/29/17.
  */
-public class GoFish extends Game
+public class GoFish extends CardMover
 {
     String sayWhatGame;
     String sayRulesOfGame;
@@ -14,7 +14,12 @@ public class GoFish extends Game
     String sayYourTurn;
     String promptPlayerToAskComputer;
     String describeHowCardMoved;
+    String gameOverMessage;
 
+    boolean isGameOver;
+
+    Player player1;
+    Player player2;
     Player player1sBook;
     Player player2sBook;
     Scanner computerScan;
@@ -23,22 +28,60 @@ public class GoFish extends Game
 
     public GoFish()
     {
-        sayWhatGame = " The game is GoFish! \n";
-        sayRulesOfGame = "You are " + player1.getName() + " and the computer is " + player2.getName() + ".\n\n" + "We're playing for books of four cards.";
-        promptForEnterKey = "\n (press enter when ready) \n";
-        sayYourTurn = "\n OK, now it's your turn. \n";
-        promptPlayerToAskComputer = "What card are you asking for? \n \n " + "(enter a card value)\n\n";
-        describeHowCardMoved = "~card moved from player to other player~";
-
-        player1 = new Player("Player One");
+        isGameOver = false;
+        player1 = new Player("Human");
         player2 = new Player("Computer");
-        player1sBook = new Player("player one's books");
-        player2sBook = new Player("player two's books");
         computerScan = new Scanner(System.in);
         playerScan = new Scanner(System.in);
+
+        sayWhatGame = " The game is GoFish! \n";
+        sayRulesOfGame = "You are " + player1.getName() + " and the computer is " + player2.getName() + ".\n\n" + "We're playing for books of four cards.";
+        promptForEnterKey = "\n    (press enter when ready) \n";
+        sayYourTurn = "\n     OK, now it's your turn. \n";
+        promptPlayerToAskComputer = "   What card are you asking for? \n \n " + "     (enter a card value)\n\n";
+        describeHowCardMoved = "~card moved from player to other player~";
+
     }
 
     public void playGame()
+    {
+        setUpAndDeal();
+        do
+        {   //TODO: gather methods into player's turns methods
+            //player2sTurn();
+            computerAsksPlayer();
+            getCardAskedOrDrawFromDeck(player1, player2);
+            moveMatchesToBook(player2, askedCardValue);
+            moveMatchesToBook(player2, player2.hand.valueOfNewestCard());
+            System.out.println(getPlayersBooks(player2));
+            System.out.println("\n" + deck.getQuantityOfCards() + " cards remain in the deck.");
+            //end player2sTurn
+
+            //player1sTurn();
+            System.out.println(sayYourTurn);
+            System.out.println(showPlayer1sHand());
+            System.out.println(promptPlayerToAskComputer);
+
+            playerAsksComputer();
+            getCardAskedOrDrawFromDeck(player2, player1);
+            moveMatchesToBook(player1, askedCardValue);
+            //TODO: fix this method, tries index -1 if hand is empty.
+            moveMatchesToBook(player1, player1.hand.valueOfNewestCard());
+            System.out.println(showPlayer1sHand());
+            System.out.println(getPlayersBooks(player1));
+            System.out.println("\n" + deck.getQuantityOfCards() + " cards remain in the deck.");
+            System.out.println(promptForEnterKey);
+            computerScan.nextLine();
+            //end player1sTurn
+
+        } while (!gameOverCondition());
+        sayGAME_OVERmessage();
+
+    }
+
+
+
+    public void setUpAndDeal()
     {
         System.out.println(sayWhatGame);
         System.out.println(sayRulesOfGame);
@@ -46,42 +89,52 @@ public class GoFish extends Game
         deal(player1, 7);
         deal(player2, 7);
         System.out.println(showPlayer1sHand());
-        do
+    }
+
+    public void computerAsksPlayer()
+    {
+        setAskedCardToRandomCardInPlayer2sHand();
+        System.out.println(" Do you have any " + this.askedCardValue + "'s?");
+        playerScan.nextLine();
+    }
+
+    public void setAskedCardToRandomCardInPlayer2sHand()
+    {
+        int randomIndex = (int) (Math.random() * (player2.hand.size() - 1));
+        askedCardValue = player2.hand.get(randomIndex).getCardValue();
+    }
+
+    public void getCardAskedOrDrawFromDeck(Player asked, Player asking)
+    {
+        if (asked.hand.hasCard(askedCardValue))
         {
-            computerAsksPlayer();
-            transferMatchingCards(player2, player1, askedCardValue);
-            moveMatchesToBook(player2, player2sBook, askedCardValue);
-            moveMatchesToBook(player2, player2sBook, player2.valueOfNewestCard());
-            System.out.println(getPlayersBooks(player2sBook));
-
-            System.out.println(sayYourTurn);
-            System.out.println(showPlayer1sHand());
-            System.out.println(promptPlayerToAskComputer);
-
-            playerAsksComputer();
-            transferMatchingCards(player1, player2, askedCardValue);
-            moveMatchesToBook(player1, player1sBook, askedCardValue);
-            moveMatchesToBook(player1, player1sBook, player1.valueOfNewestCard());
-            System.out.println(showPlayer1sHand());
-            System.out.println(getPlayersBooks(player1sBook));
-            System.out.println(promptForEnterKey);
-            computerScan.nextLine();
-
-        } while (getQuantityLeftInDeck() > 1 && player2.cards.size() > 0 && player1.cards.size() > 0);
-
-        System.out.println("GAME OVER");
-        if (getQuantityLeftInDeck() < 1)
+            moveCardsByValue(asked, asking, askedCardValue);
+            System.out.println(describeHowCardMoved);
+        } else
         {
-            System.out.println("Deck is empty.");
+            deal(asking, 1);
+            System.out.println("~card drawn from deck~");
         }
-        if (player1.cards.size() < 1)
+
+    }
+
+    public void moveMatchesToBook(Player player, int matchValue)
+    {
+        if(hasBook(player, matchValue))
         {
-            System.out.println(player1.getName() + " is out of cards");
+            moveCardsByValue(player.hand, player.book, matchValue);
+            System.out.println("~cards moved to book~");
         }
-        if (player2.cards.size() < 1)
-        {
-            System.out.println(player2.getName() + " is out of cards");
-        }
+    }
+
+    public String getPlayersBooks(Player whosBooks)
+    {
+        return "\n  " + whosBooks.getName() + "'s books: ~  " + whosBooks.book.getAllCardsNow() + "~";
+    }
+
+    public String showPlayer1sHand()
+    {
+        return "\n" + player1.getName() + "'s cards:      < " + player1.hand.getAllCardsNow() + ">\n";
     }
 
     public void playerAsksComputer()
@@ -103,76 +156,49 @@ public class GoFish extends Game
         }
     }
 
-    public void computerAsksPlayer()
-    {
-        setAskedCardToRandomCardInPlayer2sHand();
-        System.out.println(" Do you have any " + this.askedCardValue + "'s?");
-        playerScan.nextLine();
-    }
-
-    public void setAskedCardToRandomCardInPlayer2sHand()
-    {
-        int randomIndex = (int) (Math.random() * (player2.cards.size() - 1));
-        askedCardValue = player2.cards.get(randomIndex).getCardValue();
-    }
-
-    public void randomTestTest()
-    {
-        int randomIndex = (int) Math.random() * (player2.cards.size() - 1);
-        askedCardValue = player2.cards.get(randomIndex).getCardValue();
-    }
-
-    public String getPlayersBooks(Player whosBooks)
-    {
-        return whosBooks.getName() + ": ~ " + whosBooks.getAllCardsNow() + " ~";
-    }
-
-    public int getQuantityLeftInDeck()
-    {
-        return deck.getQuantityOfCards();
-    }
-
     public void setAskedCardValue(int askedCardValue)
     {
         this.askedCardValue = askedCardValue;
     }
 
-    public String showPlayer1sHand()
+
+    public boolean gameOverCondition()
     {
-        return "\n" + player1.getName() + "'s hand:      < " + player1.getAllCardsNow() + ">\n";
+        if (getQuantityLeftInDeck() < 1)
+        {
+            isGameOver = true;
+            gameOverMessage = "Deck is empty";
+        }
+        if (player2.hand.size() < 1)
+        {
+            isGameOver = true;
+            gameOverMessage = player2.getName() + " is out of cards";
+        }
+        if (player1.hand.size() < 1)
+        {
+            isGameOver = true;
+            gameOverMessage = player1.getName() + " is out of cards";
+        }
+        return isGameOver;
     }
 
-    public void transferMatchingCards(Player asking, Player beingAsked, int askedValue)
+    public int getQuantityLeftInDeck()
     {
-        if (beingAsked.hasCard(askedValue))
-        {
-            for (int i = 0; i < beingAsked.cards.size(); i++)
-            {
-                boolean print = false;
-
-                if (beingAsked.getCardAtIndex(i).getCardValue() == askedValue)
-                {
-                    moveCardFromPlayerByIndex(beingAsked, asking, i);
-                    i--;
-                    print = true;
-                }
-                if (print) {System.out.println(describeHowCardMoved);}
-            }
-        } else
-        {
-            deal(asking, 1);
-            System.out.println("~player drew from deck~" + "\n");
-        }
+        return deck.getQuantityOfCards() -1;
     }
 
-    public void moveMatchesToBook(Player player, Player book, int matchValue)
+    public void sayGAME_OVERmessage()
     {
-        if (player.hasMatches(matchValue))
+        System.out.println("GAME OVER  \n" + gameOverMessage);
+    }
+
+    public boolean hasBook(Player player, int matchValue)
+    {
+        if (player.hand.hasCardGroup(matchValue, 4) && player.hand.size() > 3)
         {
-            describeHowCardMoved = "~card moved to book~";
-            transferMatchingCards(book, player, matchValue);
-            describeHowCardMoved = "~card moved from player to other player~";
+            return true;
         }
+        return false;
     }
 
 }

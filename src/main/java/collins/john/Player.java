@@ -3,12 +3,10 @@ package collins.john;
 /**
  * Created by johncollins on 1/28/17.
  */
-public class Player extends CollectionOfCards {
+public class Player {
 
-
-    public String getName() {
-        return name;
-    }
+    public BunchOfCards hand = new BunchOfCards();
+    public BunchOfCards book = new BunchOfCards();
 
     private String name;
 
@@ -16,26 +14,8 @@ public class Player extends CollectionOfCards {
         this.name = playerName;
     }
 
-    public boolean hasCard(int askedValue) {
-        for (int i = 0; i < this.cards.size(); i++) {
-            if (this.getCardAtIndex(i).getCardValue() == askedValue) {
-                return true;
-            }
-        }
-        return false;
-    }
-    public boolean hasMatches(int askedValue){
-        int matches = 0;
-        for (int i = 0; i < this.cards.size(); i++) {
-            if (this.getCardAtIndex(i).getCardValue() == askedValue) {
-                matches++;
-            }
-            if (matches > 3){
-                return true;
-            }
-        }
-        return false;
-
+    public String getName() {
+        return name;
     }
 
 }
